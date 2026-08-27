@@ -4,17 +4,19 @@ Site de prezentare pentru atelierul lui Sergiu: Iveco Daily 2.3 și 3.0, an 2012
 mai nou. O singură pagină statică, fără build și fără dependențe externe.
 
 ```
-index.html          toata pagina: HTML + CSS + JS
-vendor/anime.min.js biblioteca de animatie (locala, ca sa mearga si fara internet)
-galerie/1..6.jpg     pozele din galerie (demo — de inlocuit)
+index.html            structura paginii (doar HTML)
+css/style.css         tot stilul: culori, layout, animatii CSS
+js/main.js            tot codul: CONFIG, scenele SVG, galeria, formularele
+vendor/anime.min.js   biblioteca de animatie (locala, merge si fara internet)
+galerie/1..6.jpg      pozele din galerie (demo — de inlocuit)
 ```
 
 ## Ce modifici cel mai des
 
 ### Telefon, e-mail, adresă
 
-Toate datele de contact stau într-un singur loc, în `index.html`, în blocul `CONFIG`
-din `<script>` (spre finalul fișierului):
+Toate datele de contact stau într-un singur loc, la începutul lui `js/main.js`,
+în blocul `CONFIG`:
 
 ```js
 const CONFIG = {
