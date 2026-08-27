@@ -24,10 +24,6 @@ const NS      = 'http://www.w3.org/2000/svg';
 const clamp   = (v, a, b) => v < a ? a : v > b ? b : v;
 const ease    = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
-/* reevaluat la resize/rotire ⇒ filtrul scump se dezactivează corect pe mobil */
-const mqCoarse = matchMedia('(max-width: 980px)');
-let COARSE = mqCoarse.matches;
-mqCoarse.addEventListener('change', e => { COARSE = e.matches; });
 const el      = (n, a) => { const x = document.createElementNS(NS, n); for (const k in a) x.setAttribute(k, a[k]); return x; };
 
 /* ═══ câmp de stele: se întinde de la vârful paginii până la linia de sub hero ═══ */
@@ -306,7 +302,7 @@ function renderMech(a, s) {
 }
 
 /* ── SCENA · GRUP SPATE (aceeaşi mecanică de scroll) ── */
-const diffScene = $('#diffScene'), diffSvg = $('#diffSvg'), diffState = $('#diffState');
+const diffScene = $('#diffScene'), diffState = $('#diffState');
 const crownRot = $('#crownRot'), pinionRoll = $('#pinionRoll');
 const diffSteps = $$('#diffSteps .step');
 const diffAssembly = buildAssembly('#diffSvg');

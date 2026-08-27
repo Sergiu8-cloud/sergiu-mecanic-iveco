@@ -10,7 +10,6 @@
   --char:color-mix(in srgb, var(--c1) 78%, var(--c2));
   --graph:color-mix(in srgb, var(--c1) 58%, var(--c2));
   --steel:color-mix(in srgb, var(--c1) 38%, var(--c2));
-  --steel-2:color-mix(in srgb, var(--c1) 18%, var(--c2));
   --line:color-mix(in srgb, var(--c1) 34%, var(--c2));
   --line-2:color-mix(in srgb, var(--c2) 82%, var(--c3));
   --white:color-mix(in srgb, var(--c3) 16%, #fff);
@@ -28,7 +27,6 @@
      https://coolors.co/18191d-212226-222327-3a3b3f */
   --d1:#18191D;
   --d2:#212226;
-  --d3:#222327;
   --d4:#3A3B3F;
   --brown:#BE8A52;
   --brown-dim:#7C5836;
@@ -282,7 +280,6 @@ header,.strip,#mechScene,#diffScene,#servicii,#galerie,#recenzii,#programare,.ct
   --char:var(--d2);
   --graph:#1D1E22;
   --steel:#26272C;
-  --steel-2:#2E2F34;
   --line:#2B2C31;
   --line-2:var(--d4);
   --white:#F3F1EE;
@@ -416,18 +413,14 @@ header,.strip,#mechScene,#diffScene,#servicii,#galerie,#recenzii,#programare,.ct
 .f{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
 .f.full{grid-column:1/-1;}
 .f label{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:0.14em;color:var(--grey-3);text-transform:uppercase;}
-.f input,.f select,.f textarea{
+.f input,.f textarea{
   background:var(--ink);border:1px solid var(--line);border-radius:var(--r-sm);color:var(--white);
   padding:11px 13px;font-family:'Inter';font-size:13.5px;outline:none;width:100%;
   transition:border-color .2s,box-shadow .2s;
 }
 .f input::placeholder,.f textarea::placeholder{color:var(--grey-3);}
-.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft);}
+.f input:focus,.f textarea:focus{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft);}
 .f textarea{resize:vertical;min-height:86px;}
-.f select{appearance:none;cursor:pointer;padding-right:34px;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A525C' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 11px center;background-size:15px;}
-.f select option{background:var(--ink);}
 .fnote{font-size:11.5px;color:var(--grey-3);margin:0 0 18px;}
 .srow{display:flex;align-items:center;gap:15px;flex-wrap:wrap;}
 #formOk,#revOk{display:none;margin-top:15px;padding:12px 14px;border-radius:var(--r-sm);
