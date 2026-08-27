@@ -1,0 +1,18 @@
+# unelte locale, nu fac parte din site
+.claude/
+claude-skills/
+
+# copii de siguranta
+*.bak
+
+# imagini nefolosite pe site (stock cu watermark / paleta de culori)
+iveco.jpg
+7545c350d8e085bac1922be44475585a.jpg
+
+# vercel / node
+.vercel
+node_modules/
+
+# sistem
+.DS_Store
+Thumbs.db
